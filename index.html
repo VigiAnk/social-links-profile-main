@@ -102,11 +102,13 @@
     .links {
       display: flex;
       flex-direction: column;
+      gap: calc(16 / 14 * 1rem);
+      width: 100%;
 
       & a {
         width: 100%;
+        box-sizing: border-box;
         background-color: hsl(0, 0%, 20%);
-        margin-bottom: calc(16 / 14 * 1rem);
         padding: calc(12 / 14 * 1rem);
         border-radius: calc(8 / 14 * 1rem);
         color: hsl(0, 0%, 100%);
@@ -114,10 +116,6 @@
         line-height: 150%;
         font-weight: bold;
         text-decoration: none;
-      }
-
-      & a:last-child {
-        margin-bottom: 0;
       }
 
       & a:hover {
