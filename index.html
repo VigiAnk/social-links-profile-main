@@ -16,6 +16,16 @@
       font-weight: 400 600 700; /* covering all font weight options */
     }
 
+    /* changes on mobile screens */
+    @media (max-width: 375px) {
+      .container {
+        /* standard format: using calc to make calculations */
+        padding: calc(24 / 14 * 1rem);
+        width: calc(327 / 14 * 1rem);
+        height: calc(579 / 14 * 1rem);
+      }
+    }
+
     html {
       /* html root font size */
       font-size: 14px;
@@ -26,6 +36,11 @@
       font-family: 'Inter', sans-serif;
       /* set the background color */
       background-color: hsl(0, 0%, 8%);
+      /* set a height to make vertical centering possible */
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     * {
@@ -33,6 +48,86 @@
       font-family: inherit;
     }
     
+    .container {
+      background-color: hsl(0, 0%, 12%);
+      padding: calc(40 / 14 * 1rem);
+      border-radius: calc(12 / 14 * 1rem);
+      box-sizing: border-box;
+      width: calc(384 / 14 * 1rem);
+      height: calc(611 / 14 * 1rem);
+      text-align: center;
+    }
+
+    .profile-pic {
+      width: calc(88 / 14 * 1rem);
+      height: calc(88 / 14 * 1rem);
+      /* FlexBox is only applicable to the child element, not location on its parent */
+      /* To be centered in a Block element, just use margin: 0 auto;  */
+      margin: 0 auto;
+    
+      & img {
+        width: 100%;
+        height: 100%;
+        border-radius: calc(999 / 14 * 1rem);
+      }
+    }
+
+    .name-location {
+      margin-top: calc(24 / 14 * 1rem);
+      width: 100%;
+
+      & .name {
+        line-height: 150%;
+        margin-bottom: calc(4 / 14 * 1rem);
+        color: hsl(0, 0%, 100%);
+        font-size: calc(24 / 14 * 1rem);
+        font-weight: bold;
+      }
+
+      & .location {
+        line-height: 150%;
+        color: hsl(75, 94%, 57%);
+        font-size: 1rem;
+        font-weight: bold;
+      }
+    }
+
+    .bio {
+      font-size: 1rem;
+      line-height: 150%;
+      color: hsl(0, 0%, 100%);
+      margin: calc(24 / 14 * 1rem) 0;
+    }
+
+    .links {
+      display: flex;
+      flex-direction: column;
+
+      & a {
+        width: 100%;
+        background-color: hsl(0, 0%, 20%);
+        margin-bottom: calc(16 / 14 * 1rem);
+        padding: calc(12 / 14 * 1rem);
+        border-radius: calc(8 / 14 * 1rem);
+        color: hsl(0, 0%, 100%);
+        font-size: 1rem;
+        line-height: 150%;
+        font-weight: bold;
+        text-decoration: none;
+      }
+
+      & a:last-child {
+        margin-bottom: 0;
+      }
+
+      & a:hover {
+        /* for hover styles */
+        background-color: hsl(75, 94%, 57%);
+        color: hsl(0, 0%, 20%);
+        cursor: calc(16.16 / 14 * 1rem) calc(20 / 14 * 1rem), auto;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -53,11 +148,11 @@
     <div class="bio">"Front-end developer and avid reader."</div>
     <!-- links to view the person's profile -->
     <div class="links"> 
-      <a href="" class="link-1">GitHub</a>
-      <a href="" class="link-2">Frontend Mentor</a>
-      <a href="" class="link-3">LinkedIn</a>
-      <a href="" class="link-4">Twitter</a>
-      <a href="" class="link-5">Instagram</a>
+      <a href="">GitHub</a>
+      <a href="">Frontend Mentor</a>
+      <a href="">LinkedIn</a>
+      <a href="">Twitter</a>
+      <a href="">Instagram</a>
     </div>
   </div>
 
