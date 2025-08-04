@@ -5,30 +5,61 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Social links profile</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    /* Locally Imported Google Fonts (Use @font-face only once if it's a variable font) */
+    @font-face {
+      font-family: 'Inter';
+      src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
+      font-weight: 400 600 700; /* covering all font weight options */
+    }
+
+    html {
+      /* html root font size */
+      font-size: 14px;
+    }
+
+    body {
+      /* set the basic font-family */
+      font-family: 'Inter', sans-serif;
+      /* set the background color */
+      background-color: hsl(0, 0%, 8%);
+    }
+
+    * {
+      /* No default font family shall overwrite */
+      font-family: inherit;
+    }
+    
   </style>
 </head>
 <body>
 
-  Jessica Randall
-  London, United Kingdom
-  "Front-end developer and avid reader."
-
-  GitHub
-  Frontend Mentor
-  LinkedIn
-  Twitter
-  Instagram
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <div class="container">
+    <!-- the person's profile avatar -->
+    <div class="profile-pic">
+      <img src="./assets/images/avatar-jessica.jpeg" alt="avatar-jessica">
+    </div>
+    <!-- the person's name & location -->
+    <div class="name-location">
+      <!-- name of the person -->
+      <div class="name">Jessica Randall</div>
+      <!-- where the person resides -->
+      <div class="location">London, United Kingdom</div>
+    </div>
+    <!-- summary of the person's occupation -->
+    <div class="bio">"Front-end developer and avid reader."</div>
+    <!-- links to view the person's profile -->
+    <div class="links"> 
+      <a href="" class="link-1">GitHub</a>
+      <a href="" class="link-2">Frontend Mentor</a>
+      <a href="" class="link-3">LinkedIn</a>
+      <a href="" class="link-4">Twitter</a>
+      <a href="" class="link-5">Instagram</a>
+    </div>
   </div>
+
 </body>
 </html>
