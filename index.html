@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
@@ -14,16 +14,6 @@
       font-family: 'Inter';
       src: url('./assets/fonts/Inter-VariableFont_slnt,wght.ttf') format('truetype');
       font-weight: 400 600 700; /* covering all font weight options */
-    }
-
-    /* changes on mobile screens */
-    @media (max-width: 375px) {
-      .container {
-        /* standard format: using calc to make calculations */
-        padding: calc(24 / 14 * 1rem);
-        width: calc(327 / 14 * 1rem);
-        height: calc(579 / 14 * 1rem);
-      }
     }
 
     html {
@@ -50,12 +40,23 @@
     
     .container {
       background-color: hsl(0, 0%, 12%);
+      /* standard format: using calc to make calculations */
       padding: calc(40 / 14 * 1rem);
       border-radius: calc(12 / 14 * 1rem);
       box-sizing: border-box;
       width: calc(384 / 14 * 1rem);
       height: calc(611 / 14 * 1rem);
       text-align: center;
+    }
+
+    /* changes on mobile screens */
+    @media (max-width: 375px) {
+      /* Must be put after the standard .container styles to prevent overwriting!!! */
+      .container {
+        padding: calc(24 / 14 * 1rem);
+        width: calc(327 / 14 * 1rem);
+        height: calc(579 / 14 * 1rem);
+      }
     }
 
     .profile-pic {
@@ -155,4 +156,10 @@
   </div>
 
 </body>
+
+<script>
+  console.log("当前缩放比例:", window.visualViewport.scale);
+  console.log("真实视口宽度:", document.documentElement.clientWidth);
+</script>
+
 </html>
